@@ -11,13 +11,13 @@ class WelcomeController extends CI_Controller
         $this->load->helper('functions');
     }
 
-    
+
     public function index()
     {
         $welcome = new Welcome;
 
         $this->blade->view('welcome_message');
-        return view('')
+
     }
 
 
