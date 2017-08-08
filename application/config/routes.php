@@ -78,16 +78,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	/**
 	 *
 	 * Route:: code here
-	 * 
+	 *
 	 */
 	Route::get('/', 'WelcomeController/index');
-	Route::post('store', 'WelcomeController/store');
-	
+	Route::post('/store', 'WelcomeController/store');
+
 
 	Route::get('hocsinh', 'WelcomeController');
 	$route = Route::map();
-	
-	
+
+
 	$route['default_controller'] = 'WelcomeController';
 
 	$route['404_override'] = '';
