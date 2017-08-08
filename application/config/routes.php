@@ -78,13 +78,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	/**
 	 *
 	 * Route:: code here
+	 * CRUD: Test method route by Postman
 	 *
 	 */
+
 	Route::get('/', 'WelcomeController/index');
-	Route::post('/store', 'WelcomeController/store');
+	Route::post('store', 'WelcomeController/store');
+	Route::put('update/(:num)', 'WelcomeController/update/$1');
+	Route::delete('delete/(:num)', 'WelcomeController/delete/$1');
 
-
-	Route::get('hocsinh', 'WelcomeController');
 	$route = Route::map();
 
 

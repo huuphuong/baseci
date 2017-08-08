@@ -17,15 +17,28 @@ class WelcomeController extends CI_Controller
     }
 
 
-    public function user($user_id)
+    public function create()
     {
-        return $user_id;
+        echo "Create";
     }
 
 
     public function store()
     {
-        echo input('username');
-        exit;
+       echo "Store";
+    }
+
+
+
+    public function update($id)
+    {
+        echo "Update";
+    }
+
+
+    public function delete($id)
+    {
+        // Delete record
+        echo "Delete";
     }
 }
