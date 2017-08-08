@@ -28,6 +28,12 @@ function dd($data)
 }
 
 
+function asset($path)
+{
+	return base_url('public/' . $path);
+}
+
+
 
 
 
