@@ -282,6 +282,9 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder);
 
+
+require_once 'vendor/autoload.php';
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

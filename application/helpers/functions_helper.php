@@ -20,7 +20,7 @@ if ( ! function_exists('get_var') )
 }
 
 
-function dd($data)
+function pr($data)
 {
 	echo "<pre>";
 		print_r($data);

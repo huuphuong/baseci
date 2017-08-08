@@ -6,18 +6,14 @@ class WelcomeController extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
-        $this->load->model('Welcome', 'Welcome');
-        $this->load->helper('functions');
+        $this->load->model('Welcome');
     }
 
 
     public function index()
     {
-        $welcome = new Welcome;
-
-        $this->blade->view('welcome_message');
-
+        $welcome = Welcome::all();
+        $this->blade->view('welcome_message', compact('welcome'));
     }
 
 

@@ -1,30 +1,9 @@
-<?php 
+<?php
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Welcome extends CI_Model
+class Welcome extends Eloquent
 {
-	public $table = 'users';
-	public $primaryKey = 'user_id';
+	public $table = 'tblcanbo';
+	public $primaryKey = 'pk_smacanbo';
 
-	public function __construct()
-	{
-		parent::__construct();
-
-		$this->load->library('form_validation');
-
-	}
-
-
-	public function getRule()
-	{
-		return [
-			'name' => 'Phuong',
-			'age' => 22
-		];
-	}
-
-	public function getAll()
-	{
-		$q = $this->db->get($this->table);
-		return $q->result_array();
-	}
 }
