@@ -16,34 +16,36 @@
 		</div><!-- /.col-sm-12 -->
 	</div><!-- /.row -->
 
-
+	<br>
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title">List staff</h3>
+					<h3 class="panel-title">
+						<span class="glyphicon glyphicon-list"></span> List user
+					</h3>
 				</div>
 				<div class="panel-body">
-					<table class="table table-hover">
+					<table class="table table-striped table-bordered">
 						<thead>
 							<tr>
-								<th>Index</th>
-								<th>Fullname</th>
-								<th>Birthday</th>
-								<th>Gender</th>
-								<th>Email</th>
-								<th>Phone</th>
+								<th>ID</th>
+								<th>User name</th>
+								<th>E-mail</th>
+								<th>Token</th>
+								<th>Created at</th>
+								<th>Updated at</th>
 							</tr>
 						</thead>
 						<tbody>
-							@forelse ($welcome AS $k => $user)
+							@forelse ($users AS $key => $user)
 							<tr>
-								<td>{{ $k+1 }}</td>
-								<td>{{ $user->shodem }}</td>
-								<td>{{ $user->sngaysinh }}</td>
-								<td>{{ $user->sgioitinh }}</td>
-								<td>{{ $user->semail }}</td>
-								<td>{{ $user->sdienthoai }}</td>
+								<td>{{ $key+1 }}</td>
+								<td>{{ $user->name }}</td>
+								<td>{{ $user->email }}</td>
+								<td>{{ $user->remember_token }}</td>
+								<td>{{ $user->created_at }}</td>
+								<td>{{ $user->updated_at }}</td>
 							</tr>
 
 							@empty
