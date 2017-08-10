@@ -12,8 +12,9 @@ class WelcomeController extends CI_Controller
 
     public function index()
     {
-        $welcome = Welcome::all();
-        $this->blade->view('welcome_message', compact('welcome'));
+		$welcome = new Welcome();
+        $users = $welcome->getListUser();
+        $this->blade->view('welcome_message', compact('users'));
     }
 
 
