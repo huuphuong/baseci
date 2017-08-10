@@ -1,7 +1,11 @@
-* {
+*{
     border-radius: 0 !important;
 }
 
 .content-container {
     margin-top: 80px;
+}
+
+.panel-title {
+	font-weight: bold;
 }
